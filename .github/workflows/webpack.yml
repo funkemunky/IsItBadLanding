@@ -6,16 +6,14 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          node-version: '14' # Use the Node.js version your project requires
+          persist-credentials: false
 
       - name: Install Dependencies
         run: npm install
@@ -23,9 +21,8 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to GH Page
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: dist # The folder the action should deploy.
-          token: ${{ secrets.GITHUB_TOKEN }} # GitHub automatically creates this secret to authenticate in your workflow.
+          branch: gh-pages
+          folder: dist
