@@ -12,6 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.prod.js",
     "build-bulma": "sass --load-path=node_modules bulma.scss css/bulma.css",
+    "build-bulma-div": "sass --load-path=node_modules bulma-divider.sass css/bulma-divider.css",
     "start": "webpack serve --open --config webpack.config.dev.js",
     "deploy": "gh-pages -d dist"
   },
@@ -25,6 +26,7 @@
   },
   "dependencies": {
     "bulma": "^1.0.0",
+    "@creativebulma/bulma-divider": "^1.1.0",
     "gh-pages": "^6.1.1",
     "sass": "^1.72.0",
     "save-dev": "^0.0.1-security"

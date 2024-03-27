@@ -5,7 +5,7 @@ let currentSection = 0;
 let sections = [];
 
 function startSectioning() {
-  document.querySelectorAll(".section, .hero").forEach(element => {
+  document.querySelectorAll("section").forEach(element => {
     sections.push(element);
   });
 
