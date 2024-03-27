@@ -22438,4 +22438,8 @@ has-background-danger.is-hoverable:active {
   color: #8a4d76;
 }
 
+#number {
+  transition: all 2s ease-in-out;
+}
+
 /*# sourceMappingURL=bulma.css.map */
