@@ -22442,4 +22442,19 @@ has-background-danger.is-hoverable:active {
   transition: all 2s ease-in-out;
 }
 
+.ico {
+  font-size: 75px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .why-us {
+    background-color: #2a2e37;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .why-us {
+    background-color: #e6e6e6;
+  }
+}
+
 /*# sourceMappingURL=bulma.css.map */
