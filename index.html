@@ -3,9 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Bulma!</title>
-  <link rel="stylesheet" href="./css/bulma.css">
-  <link rel="stylesheet" href="./css/bulma-divider.css">
+  <title>IsItBad?</title>
+  <link rel="stylesheet" href="./css/gen/bulma.css">
+  <link rel="stylesheet" href="./css/gen/bulma-divider.css">
+  <style>
+    @media(max-width: 500px) {
+      .reverse-columns {
+        flex-direction: column-reverse;
+        display: flex;
+      }
+    }
+  </style>
   <script src="./js/scripts/home.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -14,55 +22,98 @@
 <section class="hero is-fullheight">
   <div class="hero-body">
     <div class="container">
-      <div class="columns" style="height:450px;">
-        <div class="column">
-          <div class="container">
+      <div class="columns is-vcentered reverse-columns">
+        <div class="column is-12-mobile is-12-tablet is-7-desktop is-7-widescreen is-7-fullhd">
             <h1 class="title">
               Say goodbye to <span class="purple-text">Malicious Traffic</span>
             </h1>
             <p class="subtitle">Let IsItBad remove pesky cheaters from your game server, or mitigate fraud on your web store.</p>
-          </div>
-          <div class="container" style="margin-top: 80px;">
-            <nav class="level">
-              <div class="level-item has-text-centered" style="min-width:200px;">
-                <div>
-                  <p class="heading">Queries This Month</p>
-                  <p class="title" id="queries-total">Loading...</p>
-                </div>
+          <nav class="level" style="margin-top: 80px;">
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Queries This Month</p>
+                <p class="title" id="queries-total">Loading...</p>
               </div>
-              <div class="level-item has-text-centered" style="min-width:200px;">
-                <div>
-                  <p class="heading">Users</p>
-                  <p class="title" id="users-total">Loading...</p>
-                </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Users</p>
+                <p class="title" id="users-total">Loading...</p>
               </div>
-              <div class="level-item has-text-centered" style="min-width:200px;">
-                <div>
-                  <p class="heading">Blocked IPs</p>
-                  <p class="title" id="blocks-ips">Loading...</p>
-                </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Blocked IPs</p>
+                <p class="title" id="blocks-ips">Loading...</p>
               </div>
-              <div class="level-item has-text-centered" style="min-width:200px;">
-                <div>
-                  <p class="heading">Blocked Providers</p>
-                  <p class="title" id="blocks-providers">Loading...</p>
-                </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Blocked Providers</p>
+                <p class="title" id="blocks-providers">Loading...</p>
               </div>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </div>
-        <div class="column">
-          <div class="container has-text-centered mb-6">
-            <img src="./img/no-bots.svg" alt="no bots" style="max-width:784px" class="m-auto">
-          </div>
+        <div class="column is-12-mobile is-12-tablet is-5-desktop is-5-widescreen is-5-fullhd">
+          <figure class="image is-square">
+            <img src="./img/no-bots.svg" alt="no bots">
+          </figure>
         </div>
       </div>
     </div>
   </div>
 </section>
-<div class="divider" data-content="OR"></div>
-<section id="who" class="section" style="min-height:100vh;">
+<section id="who" class="section why-us" style="min-height:100vh;">
   <p class="title has-text-centered">Why Us?</p>
+  <div class="container" style="width:80%;">
+    <div class="columns mx-auto mt-6">
+      <div class="column content is-3-desktop is-12-mobile is-6-tablet mx-auto">
+        <ion-icon class="ico" name="flash-outline" style="color:lightblue;"></ion-icon>
+        <h1>Lightning Fast</h1>
+        We use geographically distributed lp is-12-oadbalancer to provide extremely low-latency API access-times.'
+        And with our ultra-optimized database, it processes your queries <i>lightning</i> fast.
+      </div>
+      <div class="column content is-3-desktop is-12-mobile is-6-tablet mx-auto">
+        <ion-icon class="ico" name="barcode-outline" style="color:lightblue;"></ion-icon>
+        <h1>Advanced Surveillance</h1>
+        Our crawlers scour the internet for malicious IPs and reports back to home base on its findings, every 30 seconds.
+      </div>
+      <div class="column content is-3-desktop is-12-mobile is-6-tablet mx-auto">
+        <ion-icon class="ico" name="finger-print-outline" style="color:lightblue;"></ion-icon>
+        <h1>De-anonymize Your Traffic</h1>
+        Utilizing our own active IP tracking, and along with Maxmind Geolocation Data, nothing will get past our checks.
+      </div>
+    </div>
+    <div class="columns is-vcentered is-centered mx-auto" style="margin-top:80px;">
+      <div class="column is-4-desktop is-4-widescreen is-4-fullhd is-6-mobile is-6-tablet">
+        <div class="container box has-text-centered is-bordered">
+          <span class="tag is-primary is-medium">FREE</span> 20,000 queries per month
+        </div>
+      </div>
+    </div>
+  </div>
  </section>
+<section id="start" class="hero is-fullheight" style="min-height:100vh;">
+  <p class="title has-text-centered mt-6">Get Started</p>
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered has-text-centered">
+        <div class="column is-3-desktop is-3-fullhd is-3-widescreen is-12-mobile is-6-tablet content mx-auto">
+          <h2>Buy a License</h2>
+          <a href="#" class="button is-primary">Join Here</a>
+        </div>
+        <div class="column is-3-desktop is-3-fullhd is-3-widescreen is-12-mobile is-6-tablet content mx-auto">
+          <h2>Download For Your Minecraft Server</h2>
+          <a href="#" class="button is-primary">Join Here</a>
+        </div>
+        <div class="column is-3-desktop is-3-fullhd is-3-widescreen is-12-mobile is-6-tablet content mx-auto">
+          <h2>See the API In Action</h2>
+          <a href="#" class="button is-primary">Join Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>

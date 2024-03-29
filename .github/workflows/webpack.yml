@@ -20,6 +20,9 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Build CSS Files
+        run: npm run build-bulma && num run build-bulma-div
+
       - name: Build Project
         run: npm run build
 
