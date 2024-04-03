@@ -1,3 +1,5 @@
+import "ionicons";
+
 document.addEventListener("DOMContentLoaded", function() {
   // Your code here
   getQueriesFromAPI();
