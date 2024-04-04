@@ -8,9 +8,8 @@ function lookupIp() {
 
   const ipAddress = window.document.getElementById("ipAddress").value;
 
-  fetch(`https://funkemunky.cc/vpn?ip=${ipAddress}`)
+  fetch(`https://funkemunky.cc/vpn?ip=${encodeURIComponent(ipAddress)}`)
     .then(response => response.json()).then(data => {
-      console.log(data);
       if(data.error) {
         window.document.getElementById("isitbad").textContent = 'Error';
       } else {
